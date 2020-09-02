@@ -52,7 +52,7 @@ function Board:load(tileset)
     -- User portrait
     -- load file from ~/.local/share/love/kanoPong
     local img
-    if love.filesystem.exists("res/images/avatar.png") then
+    if love.filesystem.getInfo("res/images/avatar.png") then
         img = g.newImage("res/images/avatar.png")
     end
     local quad

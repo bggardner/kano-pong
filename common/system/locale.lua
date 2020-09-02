@@ -22,7 +22,7 @@ local localization = nil
 
 function Locale.load()
     local filepath = path..'/'..currentLocale..'/'..fileName
-    if f.exists(filepath) then
+    if f.getInfo(filepath) then
         localization = f.load(filepath)()
     else                                              -- DEBUG_TAG_START
         print("ERROR: " .. filepath .. " not found")  -- DEBUG_TAG_END
